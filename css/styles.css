@@ -1,0 +1,145 @@
+/* ======================== */
+/*   BASE ELEMENT STYLES   */
+/* ====================== */
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+h2,
+legend {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #515a5f;
+    margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    border-style: none;
+}
+
+input,
+select,
+textarea {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px 20px;
+    border-style: none;
+}
+
+label {
+    font-size: .90em;
+    font-weight: 400;
+    color: #47505e;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+p {
+    padding: 0px 10px;
+    margin: 12px 0;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    padding: 16px 30px;
+    margin: 40px 0;
+    border-radius: 30px;
+    border: 1px solid #000
+}
+
+footer {
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+/* ======================= */
+/*   BASE LAYOUT STYLES   */
+/* ===================== */
+
+.main-header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container {
+    text-align: center;
+    border-bottom: 4px solid black;
+    margin-bottom: 3px;
+}
+
+.form {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.container,
+.form,
+.newsletter {
+    padding: 24px 0;
+}
+
+#tagline,
+#textbox,
+footer {
+    color: #c0c7d1;
+}
+
+/* --- Pseudo Elements --- */
+
+a:hover { 
+    cursor: pointer;
+}
+
+/* ================ */
+/*   MEDIA QUERY   */
+/* ============== */
+
+@media (min-width: 760px) {
+    main {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    legend {
+        margin-bottom: 40px;
+    }
+
+    p {
+        padding: 0px;
+    }
+
+    footer {
+        margin-bottom: 200px;
+    }
+
+    .container {
+        padding: 60px 0 40px;
+    }
+
+    .form,
+    .newsletter {
+        padding: 40px 0;
+    }
+
+}
