@@ -1,6 +1,9 @@
-/* ======================== */
-/*   BASE ELEMENT STYLES   */
-/* ====================== */
+
+/* BASE ELEMENT STYLES ============== */
+
+* {
+    box-sizing: border-box;
+}
 
 h1 {
     font-family: 'Titillium Web', sans-serif;
@@ -16,25 +19,10 @@ legend {
     color: #515a5f;
     margin: 0;
 }
+/* legend = heading */
 
-fieldset {
-    padding: 0;
-    border-style: none;
-}
-
-input,
-select,
-textarea {
-    background-color: #f1f1f1;
-    width: 100%;
-    padding: 10px 20px;
-    border-style: none;
-}
-
-label {
-    font-size: .90em;
-    font-weight: 400;
-    color: #47505e;
+legend {
+    padding-bottom: 24px;
 }
 
 body {
@@ -47,17 +35,6 @@ p {
     margin: 12px 0;
 }
 
-button {
-    background-color: #000;
-    color: #fff;
-    font-weight: 600;
-    width: 100%;
-    padding: 16px 30px;
-    margin: 40px 0;
-    border-radius: 30px;
-    border: 1px solid #000
-}
-
 footer {
     font-style: italic;
     font-size: 12px;
@@ -65,9 +42,12 @@ footer {
     margin-bottom: 150px;
 }
 
-/* ======================= */
-/*   BASE LAYOUT STYLES   */
-/* ===================== */
+p,
+footer {
+    color: #c0c7d1;
+}
+
+/* BASE LAYOUT STYLES ============== */
 
 .main-header {
     background-color: #000;
@@ -77,12 +57,12 @@ footer {
     padding: 15px 0;
 }
 
-.wrapper {
+.container {
     width: 90%;
     margin: 0 auto;
 }
 
-.container {
+.intro {
     text-align: center;
     border-bottom: 4px solid black;
     margin-bottom: 3px;
@@ -93,27 +73,107 @@ footer {
     border-bottom: 2px solid black;
 }
 
-.container,
+/* FORM FIELDS ============== */
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+}
+/* fieldset = form field */
+
+form[input] {
+    text-align: left;
+    max-width: 200px;
+    margin: auto;
+}
+
+.intro,
 .form,
 .newsletter {
     padding: 24px 0;
 }
 
-#tagline,
-#textbox,
-footer {
-    color: #c0c7d1;
+input,
+select,
+textarea {
+    background-color: #f1f1f1;
+    border-style: none;
+    padding: 15px;
 }
 
-/* --- Pseudo Elements --- */
+input,
+textarea,
+select[id="state"] {
+    width: 100%;
+    font-size:.85em;
+}
+
+input[type="zip"] {
+    width: 50%;
+}
+
+textarea {
+    padding: 10px 10px;
+    resize: none;
+    /* scrolling feature */
+}
+
+textarea,
+select,
+input[type] {
+    margin: 10px 0 15px;
+    border-radius: 4px;
+}
+
+input[placeholder] {
+    text-align: right;
+    font-style: italic;
+    font-size: .75em;
+    padding-right: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 5px;
+}
+
+select,
+input[placeholder] {
+    color: #666;
+    font-size: .85em;
+    padding-left: 10px;
+}
+
+label {
+    font-size: .90em;
+    font-weight: 400;
+    color: #000;
+}
+
+label[for] {
+    margin: 20px 0;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    padding: 16px 30px;
+    margin: 40px 0;
+    border-radius: 30px;
+    border: 1px solid #000
+}
+
+/* Pseudo Elements -------------- */
 
 a:hover { 
     cursor: pointer;
 }
 
-/* ================ */
-/*   MEDIA QUERY   */
-/* ============== */
+/* MEDIA QUERY ============== */
 
 @media (min-width: 760px) {
     main {
@@ -133,7 +193,7 @@ a:hover {
         margin-bottom: 200px;
     }
 
-    .container {
+    .intro {
         padding: 60px 0 40px;
     }
 
