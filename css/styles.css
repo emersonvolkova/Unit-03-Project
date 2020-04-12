@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+main {
+    padding-bottom: 20px;
+}
+
 body {
     font-family: Helvetica, sans-serif;
     background-color: #fff;
@@ -35,7 +39,8 @@ footer {
     font-style: italic;
     font-size: 12px;
     text-align: center;
-    margin-bottom: 150px;
+    padding: 20px 0;
+    height: 150px;
 }
 
 p,
@@ -58,6 +63,7 @@ footer {
 }
 
 .banner {
+    background-color:#e9e9e9;
     border-bottom: 4px solid black;
     margin-bottom: 2px;
 }
@@ -81,7 +87,6 @@ fieldset {
 }
 
 .banner,
-/* .newsletter, */
 legend {
     padding: 24px 0;
 }
@@ -109,25 +114,12 @@ input[type="zip"] {
 textarea {
     padding: 10px;
     resize: none;
-    /* scrolling feature */
 }
 
 textarea,
 select,
-input[type] {
+input {
     margin: 10px 0 15px;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #b60f0f;
-}
-/* NOT WORKING! */
-
-input[placeholder] {
-    text-align: right;
-    font-style: italic;
-    padding-right: 10px;
 }
 
 .flex input {
@@ -156,11 +148,14 @@ label {
 }
 
 .submit {
+    display: block;
+    margin: 0 auto;
     background-color: #000;
     color: #fff;
     cursor: pointer;
     font-weight: 600;
     width: 80%;
+    margin: 0 auto;
     height: 50px;
     border-radius: 30px;
     border: 1px solid #000
@@ -193,14 +188,24 @@ label {
 /* Pseudo Elements -------------- */
 
 a:hover { 
-    cursor: pointer;
+    cursor: pointer;;
+}
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+    padding-right: 10px;
 }
 
 input:focus,
 label:focus,
+select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+    outline-color: #3b5998;
+    outline-width: 5px;
+    transition: all .25s ease-in;
+    background-color: #aec4f3;
 }
 
 /* MEDIA QUERY ============== */
@@ -217,23 +222,22 @@ button:focus {
     }
 
     footer {
-        margin-bottom: 200px;
+        margin-top: 40px;
+        height: 200px;
     }
 
     .banner {
         padding: 60px 0 40px;
     }
 
-    /* .contact-info, */
     .flex-1 {
         flex-direction: row;
-        /* flex-basis: 100%; */
         align-content: flex-start;
         align-items: baseline;
     }
 
     .contact-info label {
-        flex-grow: 1;
+        width: 30%;
     }
 
     .contact-info input,
