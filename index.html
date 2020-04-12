@@ -16,13 +16,13 @@
             <div class="container">
                 <section class="banner">
                     <h2>Signup for our newsletter</h2>
-                        <p>Get the latest news on how your code is doing right in your inbox.</span>
+                        <p>Get the latest news on how your code is doing right in your inbox.</p>
                 </section>
                 <section class="section-wrap">
                     <div class="sections">
                         <fieldset class="contact-info">
                             <form action="index.html" method="post" id="contact-info">
-                                <legend>Contact Information</legend>
+                                <h2>Contact Information</h2>
                                 <div class="flex-1">
                                     <label for="name">Full Name</label>
                                     <input type="text" id="name" name="user_name" placeholder="Required&nbsp;&nbsp;" required>
@@ -37,11 +37,11 @@
                                         </div>
                                 <div class="flex-1">                                
                                     <label for="address">Street Address</label>
-                                    <input type="address" id="address" name="user_address">
+                                    <input type="text" id="address" name="user_address">
                                         </div>
                                 <div class="flex-1">
                                     <label for="city">City</label>
-                                    <input type="city" id="city" name="user_city">
+                                    <input type="text" id="city" name="user_city">
                                         </div>
                                 <div class="flex-1">
                                     <label for="state">State</label>
@@ -104,10 +104,11 @@
                                         </div>
                                 <div class="flex-1">
                                     <label for="zip_code">Zip Code</label>
-                                    <input type="zip" id="zip_code" name="user_zip" class="zip">
+                                    <input type="number" id="zip_code" name="user_zip" class="zip">
                                         </div>
                             </form>
                         </fieldset>
+                    </div>
                 </section>
                         <section class="section-wrap">
                             <fieldset class="newsletter">
@@ -139,7 +140,6 @@
                             <textarea id="comment" name="user_comment"></textarea>
                     </div>
                             <input type="submit" value="Sign Up" class="submit" onclick="alert('Hey der!')">
-            </div>
         </main>
         <footer>
             &copy; The Code Review
