@@ -65,7 +65,7 @@ footer {
 
 .intro {
     border-bottom: 4px solid black;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .main-header,
@@ -73,39 +73,15 @@ footer {
 text-align: center;
 }
 
-/* .contact-info label {
-    margin-bottom: 10px;
-} */
-
 /* section {
-    border-top: 2px solid black;
     border-bottom: 2px solid black;
-    margin-top: 4px;
+}
+
+section {
+    border-top: 2px solid black;
 } */
+/* NOT WORKING! */
 
-
-/* FLEXBOX ============== */
-
-.contact-info,
-.flex-pair {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.column {
-    flex-grow: 1;
-    flex-basis: 300px;
-}
-
-/* .checkbox,
-.radio {
-    align-self: flex-start;
-}
-
-input[type="checkbox"] {
-    flex: 2;
-} */
 
 /* FORM FIELDS ============== */
 
@@ -114,14 +90,13 @@ fieldset {
     margin: 0;
     border-style: none;
 }
-/* fieldset = form field */
 
 input {
     margin: auto;
 }
 
 .intro,
-.form,
+.contact-info,
 .newsletter {
     padding: 24px 0;
 }
@@ -132,7 +107,7 @@ textarea {
     background-color: #f1f1f1;
     height: 50px;
     border-style: none;
-    /* padding: 15px; */
+    padding-left: 15px;
 }
 
 input[type="checkbox"],
@@ -166,9 +141,9 @@ input[type] {
 
 input:focus,
 textarea:focus {
-    border-color: #52bab3;
+    border-color: #b60f0f;
 }
-/* not working! */
+/* NOT WORKING! */
 
 input[placeholder] {
     text-align: right;
@@ -177,19 +152,19 @@ input[placeholder] {
     padding-right: 10px;
 }
 
-/* input[type="checkbox"] + label {
-    display: inline;
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
     padding-left: 5px;
-} */
+}
+
+label {
+    display: inline;
+}
 
 input[type="checkbox"]:checked + label {
     font-weight: 600;
 }
-
-/* input[type="checkbox"],
-input[type="radio"] {
-    margin: 5px;
-} */
 
 select,
 input[placeholder] {
@@ -215,6 +190,32 @@ input[type="submit"] {
     border-radius: 30px;
     border: 1px solid #000
 }
+
+
+/* FLEXBOX -------------- */
+
+.contact-info,
+.newsletter,
+.flex-pair {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex-direction: column;
+    justify-content: ;
+    align-items: center;
+}
+
+.newsletter {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-pair {
+    margin: 0 auto;
+}
+
 
 /* Pseudo Elements -------------- */
 
@@ -245,26 +246,5 @@ a:hover {
     .intro {
         padding: 60px 0 40px;
     }
-
-    .form,
-    .newsletter {
-        padding: 40px 0;
-    }
-
-    .contact-info,
-    .flex-pair {
-        flex-direction: row;
-    }
-
-    /* .contact-info input {
-        flex-grow: 1;
-        flex-basis: 75%;
-    } */
-
-    /* .contact-info label {
-        flex-basis: 25%;
-        height: 50px;
-        margin: auto 0;
-    } */
 
 }

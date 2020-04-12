@@ -14,13 +14,11 @@
         </header>
         <main>
             <div class="container">
-                <section class="intro column">
+                <section class="intro">
                     <h2>Signup for our newsletter</h2>
                         <p>Get the latest news on how your code is doing right in your inbox.</span>
                 </section>
-                <section class="form column">
                     <fieldset class="contact-info">
-                        <div class="wrap">
                             <form action="index.html" method="post" id="contact-info">
                                 <legend>Contact Information</legend>
                                 <div class="flex-pair">
@@ -117,13 +115,10 @@
                                 <input type="zip" id="zip_code" name="user_zip">
                                 </div>
                             </form>
-                        </div>
                     </fieldset>
-                </section>
-                <section class="newsletter column">
-                    <fieldset>
-                    <legend>Newsletter</legend>
-                        <label>Select the newsletters you would like to receive</label>
+                    <fieldset class="newsletter">
+                        <legend>Newsletter</legend>
+                        <span>Select the newsletters you would like to receive</span>
                         <div class="flex-pair">                                
                             <input type="checkbox" id="html_news" value="html_news" name="newsletter">
                             <label for="html_news" class="checkbox">HTML News</label>
@@ -147,9 +142,7 @@
                             <input type="radio" id="plain" value="plain" name="format">
                             <label for="plain" class="radio">Plain Text</label>
                         </div>
-
                     </fieldset>
-                </section>
                 <label for="comment">Other topics you would like to hear about</label>
                 <br>
                 <textarea id="comment" name="user_comment"></textarea>
