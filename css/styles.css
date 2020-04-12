@@ -26,11 +26,6 @@ legend {
     color: #515a5f;
     margin: 0;
 }
-/* legend = heading */
-
-legend {
-    padding-bottom: 24px;
-}
 
 p {
     padding: 0px 10px;
@@ -63,13 +58,13 @@ footer {
     margin: 0 auto;
 }
 
-.intro {
+.banner {
     border-bottom: 4px solid black;
     margin-bottom: 2px;
 }
 
 .main-header,
-.intro {
+.banner {
 text-align: center;
 }
 
@@ -95,9 +90,9 @@ input {
     margin: auto;
 }
 
-.intro,
-.contact-info,
-.newsletter {
+.banner,
+.newsletter,
+legend {
     padding: 24px 0;
 }
 
@@ -194,27 +189,40 @@ input[type="submit"] {
 
 /* FLEXBOX -------------- */
 
-.contact-info,
-.newsletter,
-.flex-pair {
+.sections,
+.newsletter {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-content: space-between;
 }
 
-.contact-info {
+
+
+/* .contact-info {
+    display: flex;
+    align-content: center;
+} */
+
+
+
+/* .flex-pair {
+    flex: 1;
+} */
+/* .contact-info {
     flex-direction: column;
     justify-content: ;
     align-items: center;
-}
+} */
 
-.newsletter {
+/* .newsletter {
     justify-content: center;
     align-items: center;
-}
+} */
 
-.flex-pair {
+/* .flex-pair {
     margin: 0 auto;
-}
+} */
 
 
 /* Pseudo Elements -------------- */
@@ -243,7 +251,7 @@ a:hover {
         margin-bottom: 200px;
     }
 
-    .intro {
+    .banner {
         padding: 60px 0 40px;
     }
 
